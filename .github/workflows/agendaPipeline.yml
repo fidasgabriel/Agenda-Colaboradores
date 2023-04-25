@@ -21,10 +21,14 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Compilador
+    - name: Compilador Main
       run: |
            cd src
            javac -cp . Main.java
+    - name: Compilador Teste
+      run: |
+           cd src
+           javac -cp . ClassTeste.java
     - name: Rodando o Programa
       run: |
           cd src
