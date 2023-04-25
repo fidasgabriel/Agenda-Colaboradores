@@ -1,14 +1,15 @@
 import java.util.Date;
+import java.util.Scanner;
 
 public class Colaboraderes {
     private String nome;
     private long cpf;
-    private String telefone;
+    private boolean telefone;
     private Date dataNascimento;
     private Date dataAgendamento;
     private String periodo;
 
-    public Colaboraderes(String nome, long cpf, String telefone, Date dataNascimento, Date dataAgendamento, String periodo) {
+    public Colaboraderes(String nome, long cpf, boolean telefone, Date dataNascimento, Date dataAgendamento, String periodo) {
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
@@ -33,11 +34,11 @@ public class Colaboraderes {
         this.cpf = cpf;
     }
 
-    public String getTelefone() {
+    public boolean getTelefone() {
         return this.telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(boolean telefone) {
         this.telefone = telefone;
     }
 

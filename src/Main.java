@@ -1,21 +1,33 @@
-import java.util.ArrayList;
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Colaboraderes colab1 = new Colaboraderes("Lucas", 123213213, "(11) 923423432", new Date(2007, 03, 22), new Date(2023, 5, 8), "Manhã");
-        Colaboraderes colab2 = new Colaboraderes("Ismael", 23423523, "(11) 932432123", new Date(2006, 11, 20), new Date(2022, 1, 25), "Noite");
-        Colaboraderes colab3 = new Colaboraderes("Helena", 343242342, "(11) 976728991", new Date(2006, 11, 1), new Date(2023, 4, 22), "Tarde");
-        Agenda agenda1 = new Agenda(Arrays.asList(colab1, colab2, colab3));
+        Scanner scan =  new Scanner(System.in);
+        System.out.println("Nome do colaborador: ");
+        String colabNome = scan.nextLine();
+        System.out.println("CPF do colaborador: ");
+        Long colabCpf = scan.nextLong();
+        System.out.println("Telefone do colaborador: ");
+        Boolean colaTel = scan.nextBoolean();
+        System.out.println("Dia Nascimento do colaborador: ");
+        Integer colabNasDia = scan.nextInt();
+        System.out.println("Mês Nascimento do colaborador: ");
+        Integer colabNasMes = scan.nextInt();
+        System.out.println("Ano Nascimento do colaborador: ");
+        Integer colabNasAno = scan.nextInt();
+        System.out.println("Dia Agenda do colaborador: ");
+        Integer colabAgenDia = scan.nextInt();
+        System.out.println("Mês Agenda do colaborador: ");
+        Integer colabAgenMes = scan.nextInt();
+        System.out.println("Ano Agenda do colaborador: ");
+        Integer colabAgenAno = scan.nextInt();
+        System.out.println("Período do colaborador: ");
+        String colabPeri = scan.nextLine();
 
-        System.out.println("CPF Colaborador 1: " + colab1.getCpf());
-        System.out.println("Nome Colaborador 1: " + colab1.getNome());
-        System.out.println("Período Colaborador 1: " + colab1.getPeriodo());
-        System.out.println("Telefone Colaborador 1: " + colab1.getTelefone());
-        System.out.println("Nascimento Colaborador 1: " + colab1.getDataNascimento());
-        System.out.println("Data agendamento Colaborador 1: " + colab1.getDataAgendamento());
-        System.out.println("Presentes na Lista são do grupo: " + agenda1.getAgenda());
+        Colaboraderes colabTeste = new Colaboraderes(colabNome, colabCpf, colaTel, new Date(colabNasAno, colabNasMes, colabNasDia), new  Date(colabAgenAno, colabAgenMes, colabAgenDia), colabPeri);
 
     }
 }
